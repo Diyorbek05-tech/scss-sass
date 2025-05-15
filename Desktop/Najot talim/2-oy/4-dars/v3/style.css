@@ -1,0 +1,65 @@
+.item{
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    animation-name: animName;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border: 10px solid aqua;
+    border-bottom: 10px solid white;
+    animation-timing-function:  ease-in-out;
+    animation-direction: reverse;
+}
+
+@keyframes animName{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.aylana{
+    width: 300px;
+    height: 250px;
+    border-radius: 120px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.spam{
+    width: 400px;
+    height: 400px;
+    background-color: antiquewhite;
+    margin: 50px;
+    padding-top: 100px;
+}
+
+.spaM{
+    width: 150px;
+    height: 150px;
+    background-color: tomato;
+    border-radius: 50%;
+    margin-left: 120px;
+    animation-name: undov;
+    animation-timing-function: initial;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.spaM h1{
+    color: white;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+@keyframes undov{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+

@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+.body{
+    width: 800px;
+    height: 300px;
+}
+
+.sun{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(208, 158, 41);
+    border-radius: 50%;
+    margin-left: 50%;
+    transform: translatey( 400px);
+    animation: suN 7s  ease-in alternate infinite;
+    z-index: 1;
+}
+
+.mount{
+    width: 1400px;
+    height: auto;
+    display: flex;
+    margin-left: 170px;
+    transform:scale(1.2);
+    z-index: 99;
+}
+
+.cloud{
+    width: 250px;
+    transform: translateY(500px);
+    z-index: 2;
+}
+
+@keyframes suN{
+    from{transform: translateY(400px) ; opacity: 50%;}
+    to{transform: translateY(-500px); opacity: 100%;}
+}
+
+@keyframes c1{
+    from{transform: translateX(-250px) translateY(500px);}
+    to{transform: translateX(1500px) translateY(500px);}
+}
+#c1{
+    animation: c1 7s ease-out alternate infinite;
+}
+
+@keyframes c2{
+    from{transform: translateX(1300px) translateY(500px);}
+    to{transform: translateX(-570px) translateY(500px);}
+}
+#c2{
+    animation: c2 8s ease-out alternate infinite;
+}
+
+@keyframes c3{
+    from{transform: translateX(1000px) translateY(500px);}
+    to{transform: translateX(-750px) translateY(500px);}
+}
+#c3{
+    animation: c3 5s linear alternate infinite;
+}
+
+@keyframes c4{
+    from{transform: translateX(800px) translateY(500px);}
+    to{transform: translateX(-1000px) translateY(500px);}
+}
+#c4{
+    animation: c4 5s ease-in-out alternate infinite;
+}
