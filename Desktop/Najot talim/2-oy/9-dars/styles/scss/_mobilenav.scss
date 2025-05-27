@@ -1,0 +1,53 @@
+.mobilnav {
+  width: 100%;
+  background-color: blue;
+  display: none;
+  justify-content: space-between;
+  padding: 30px;
+}
+.mobilnav i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#check{
+  display: none;
+}
+
+#check:checked + .sidebar{
+  transform: translateX(0);
+}
+
+.sidebar {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color:#0e0e0e;
+
+  display: flex;
+  padding: 30px;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+
+  a{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 25px;
+  }
+}
+.sidebar > div {
+  width: 100%;
+  cursor: pointer;
+  font-size: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+#check {
+  display: none;
+}
