@@ -1,0 +1,62 @@
+@import "placeholders";
+@import "mixins";
+@import "variables";
+@import "functions";
+.card_cont {
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  .card {
+    @extend %card-style;
+    background-color: aliceblue;
+    @include flex-center;
+    flex-direction: column;
+
+    h2 {
+      @extend %h2-style;
+      margin-bottom: 18px;
+    }
+
+    p {
+      @extend %p-style;
+      margin-bottom: 20px;
+    }
+
+    button {
+      border-radius: $btn-border;
+      width: 50%;
+      height: 52px;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+.box {
+  background: red;
+  font-size: rem(18);
+  padding: rem(20);
+  margin: rem(30);
+  border-radius: rem(8);
+  line-height: rem(24);
+}
+
+.op {
+  display: flex;
+  justify-content: center;
+
+  .operators {
+    width: $width * 2;
+    height: $width + 50px;
+    padding: $width / 2;
+    margin: $width - 10px;
+    border-radius: $width % 3;
+    background-color: aqua;
+  }
+}

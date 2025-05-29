@@ -1,0 +1,31 @@
+@import "mixins";
+@import "loops";
+@import "navbar";
+@import "btns";
+@import "card";
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 20px;
+
+  @media (max-width: 1200px) {
+    padding: 15px;
+  }
+
+  @media (max-width: 992px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 8px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 5px;
+  }
+}

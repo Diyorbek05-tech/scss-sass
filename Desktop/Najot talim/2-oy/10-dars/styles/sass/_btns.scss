@@ -1,0 +1,60 @@
+@import "mixins";
+@import "variables";
+
+.fdsfsd {
+  background-color: $primary-color;
+  @include flex-center;
+  justify-content: space-around;
+
+}
+
+%base-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  @extend %base-btn;
+  background-color: blue;
+  color: white;
+}
+
+.btn-secondary {
+  @extend %base-btn;
+  background-color: gray;
+  color: white;
+}
+
+.btn-danger {
+  @extend %base-btn;
+  background-color: red;
+  color: white;
+}
+
+.btn-success {
+  @extend %base-btn;
+  background-color: green;
+  color: white;
+}
+
+.btn-warning {
+  @extend %base-btn;
+  background-color: orange;
+  color: black;
+}
+
+.btn{
+    &:hover {
+        background: darkgreen;
+      }
+    
+      &:active {
+        transform: scale(0.98);
+      }
+    
+      &:focus {
+        outline: 2px solid yellow;
+      }
+}

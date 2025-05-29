@@ -1,0 +1,31 @@
+@for $i from 1 through 5 {
+  .p-#{$i} {
+    padding: 1rem * $i;
+  }
+}
+
+@for $j from 1 through 10 {
+  .m-#{$j} {
+    margin: 5px * $j;
+  }
+}
+
+$value: 10;
+@while $value > 0 {
+  .item-#{$value} {
+    font-size: 5px * $value;
+  }
+  $value: $value - 1;
+}
+
+$themes: (
+  green: green,
+  red: red,
+  yellow: yellow,  
+);
+
+@each $key, $value in $themes {
+  .color-#{$key} {
+    color: $value;
+  }
+}

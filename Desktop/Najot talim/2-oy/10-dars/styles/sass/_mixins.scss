@@ -1,0 +1,20 @@
+@mixin buttun {
+  border: none;
+  background-color: chartreuse;
+  color: white;
+  border-radius: 5px;
+  @content;
+}
+
+@mixin card($pad: 10px, $withd: 300px) {
+  padding: $pad;
+  width: $withd;
+  background-color: blueviolet;
+  border-radius: 10px;
+}
+
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
