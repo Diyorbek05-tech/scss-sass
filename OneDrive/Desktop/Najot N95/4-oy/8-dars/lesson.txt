@@ -1,0 +1,54 @@
+function one() {
+  console.log("bir");
+}
+
+function two() {
+  one();
+  console.log("ikki");
+}
+
+function three() {
+  console.log("uch");
+  two();
+}
+
+three();
+
+Kod oxirida three(); chaqirilgan. Demak dastur birinchi navbatda three() funksiyasini bajaradi.
+function three() {
+  console.log("uch");
+  two();
+}
+Bu yerda 2 narsa bajariladi:
+"uch" konsolga chiqadi.
+two() funksiyasi chaqiriladi
+function two() {
+  one();
+  console.log("ikki");
+}
+Bu yerda:
+avval one() funksiyasi chaqiriladi,
+so'ng "ikki" konsolga chiqariladi.
+function one() {
+  console.log("bir");
+}
+Bu yerda faqat "bir" konsolga chiqariladi.
+three();        asosiy chaqiriq
+  -> console.log("uch");    1-chi chiqadi: "uch"
+  -> two();                 2-chi chaqiriladi
+       -> one();            3-chi chaqiriladi
+            → console.log("bir");   2-chi chiqadi: "bir"
+       -> console.log("ikki");      3-chi chiqadi: "ikki"
+Natijada konsolda quyidagilar chiqadi:
+uch
+bir
+ikki
+
+Callback — bu JavaScriptda boshqa funksiyaga argument sifatida uzatiladigan funksiya. U odatda biror ish tugagandan keyin keyingi harakatni bajarish uchun chaqiriladi.
+ Callback’ning asosiy vazifalari:
+ Asinxron (kechikadigan) kodni boshqarish
+ Funksiyalar o‘rtasida tartibli ish oqimini tashkil qilish
+ Kodni modullashtirish va qayta ishlatish osonligi
+Callback — bu funksiya ichida boshqa funksiyani chaqirish lekin uni argument sifatida uzatish orqali amalga oshiriladi.
+Masalan:
+functionA(functionB);a `functionB` — callback, `functionA` esa uni chaqiruvchi funksiya.

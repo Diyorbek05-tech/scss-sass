@@ -1,0 +1,30 @@
+.rescard-wrapper {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobilda 1 ustun */
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .rescard-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* Planshet – 2 ustun */
+  }
+}
+
+@media (min-width: 960px) {
+  .rescard-wrapper {
+    grid-template-columns: repeat(3, 1fr); /* Laptop – 3 ustun */
+  }
+}
+
+@media (min-width: 1280px) {
+  .rescard-wrapper {
+    grid-template-columns: repeat(4, 1fr); /* Katta ekran – 4 ustun */
+  }
+}
+
+.rescard {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}

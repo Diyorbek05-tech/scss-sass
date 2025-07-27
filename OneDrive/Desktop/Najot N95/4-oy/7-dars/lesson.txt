@@ -1,0 +1,27 @@
+Array.prototype.log = function () {
+  console.log(this);
+};
+let arr = [1, 2, 3, 4, 5];
+
+---> bu kodda Array obyektiga yangi metod qo'shilmoqda. Array.prototype orqali
+barcha massivlarga umumiy metod yoki xususiyat qo'shsak bo'ladi. yani Array.prototype
+barcha arraylar uchun prototip obyekt hisoblanadi. 
+function () {
+  console.log(this);
+}
+bu funksiya this ni consolega chiqaradi this bu yerda chaqirgan massivning o'zini bildiradi
+tepadagi kodda this arr arrayi bolib kelmoqda arr - [1,2,3,4,5]. 
+
+Array.prototype.myForEach = function (cb) {
+  for (let i = 0; i < this.length; i++) {
+    cb(this[i], i, this);
+  }
+};
+bu kodda Array.prototip orqali har bir array obyektiga myForEach degan yangi metod qo'shilyapti
+cb esa buyerda callback funksiya, yani har bir element uchun bajariladigan funksiya.
+for (let i = 0; i < this.length; i++) {
+  cb(this[i], i, this);
+}
+this[i] hozirgi i chi element i-element indeksi this ozi chaqirilgan massivlarga
+myForeach metodining vazifasi xudi myForEach kabi har bir element uchun callback funksiyasini
+ishga tushiradi
